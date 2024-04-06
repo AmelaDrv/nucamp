@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Navbar, NavbarBrand } from 'reactstrap';
 import NucampLogo from './app/assets/img/logo.png';
 import './App.css';
+import CampsiteList from './features/campsites/CampsiteList.js';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,7 +15,8 @@ function App() {
           </NavbarBrand>
         </Container>
       </Navbar>
-      I'm ready for workshop!
+      <CampsiteList/>
+      <Footer/>
     </div>
   );
   }
