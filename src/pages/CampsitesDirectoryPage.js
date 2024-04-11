@@ -1,13 +1,12 @@
-import { Container, Row, Col } from 'reactstrap';
-import CampsiteDetail from '../features/campsites/CampsiteDetail';
+import { Container } from 'reactstrap';
 import CampsiteList from '../features/campsites/CampsitesList';
-import { useState } from 'react';
-import { selectCampsiteById } from '../features/campsites/campsitesSlice';
 import React from 'react';
+import SubHeader from '../components/SubHeader';
 
 const CampsitesDirectoryPage = () => {
     return (
         <Container>
+            <SubHeader current='Directory' />
             <CampsiteList />
         </Container>
     );
