@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { selectAllCampsites } from './campsitesSlice';
 import { Col, Row } from 'reactstrap';
 import CampsiteCard from "./CampsiteCard";
 
-const CampsitesList = () => {
+class CampsitesList extends Component{
+    render(){
     const campsites = selectAllCampsites();
     return (
         <Row className='ms-auto'>
@@ -17,5 +18,6 @@ const CampsitesList = () => {
         </Row>
     );
 };
+}
 
 export default CampsitesList;
