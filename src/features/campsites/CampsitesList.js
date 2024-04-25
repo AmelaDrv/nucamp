@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { selectAllCampsites } from './campsitesSlice';
 import { Col, Row } from 'reactstrap';
 import CampsiteCard from "./CampsiteCard";
+import { useSelector } from 'react-redux';
 
-class CampsitesList extends Component{
-    render(){
-    const campsites = selectAllCampsites();
+const CampsitesList = () => {
+    const campsites = useSelector(selectAllCampsites);
+    console.log('campsites:', campsites);
     return (
         <Row className='ms-auto'>
             {campsites.map((campsite) => {
@@ -17,7 +18,6 @@ class CampsitesList extends Component{
             })}
         </Row>
     );
-};
 }
 
 export default CampsitesList;
