@@ -3,7 +3,7 @@ import AnimatedDisplayCard from './AnimatedDisplayCard';
 import { selectFeaturedCampsite } from '../campsites/campsitesSlice';
 import { selectFeaturedPromotion } from '../promotions/promotionsSlice';
 import React from 'react';
-import { selectFeaturedPartner } from '../partners/partnerSlice';
+import { selectFeaturedPartner } from '../partners/partnersSlice';
 import {useSelector} from 'react-redux'
 
 const DisplayList = () => {
@@ -14,7 +14,7 @@ const DisplayList = () => {
     ]);
 
     console.log('display items:', items);
-    
+
     return (
         <Row>
             {items.map((item, idx) => {
